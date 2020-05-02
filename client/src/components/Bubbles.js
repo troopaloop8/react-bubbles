@@ -64,7 +64,38 @@ const Bubbles = ({ colors }) => {
         <Svg width={400} height={700}>
         <Partition
           data={{
-            children: bubbleData
+            children: [
+              { value: 1, key: '1' },
+              { value: 2, key: '2' },
+              {
+                value: 0,
+                key: '3',
+                children: [
+                  { value: 1, key: 'a1' },
+                  { value: 2, key: 'a2' },
+                  {
+                    value: 0,
+                    key: 'a3',
+                    children: [
+                      { value: 1, key: 'b1' },
+                      { value: 2, key: 'b2' },
+                      {
+                        value: 3,
+                        key: 'b3',
+                        children: [
+                          { value: 1, key: 'c1' },
+                          { value: 2, key: 'c2' },
+                          {
+                            value: 3,
+                            key: 'c3',
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
           }}
           sum={datum => datum.value}
           size={[400, 400]}
