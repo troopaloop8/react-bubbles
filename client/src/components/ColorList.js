@@ -136,7 +136,10 @@ const ColorList = ({ colors, updateColors }) => {
             }}
             />
           </label>
-          <button type="submit">Add Color</button>
+          <div className="button-row">
+          <button type="submit">add color</button>
+          </div>
+          
         </form>
       <div className="spacer" />
         
