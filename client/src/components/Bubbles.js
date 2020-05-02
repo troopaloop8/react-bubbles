@@ -22,8 +22,11 @@ const Bubbles = ({ colors }) => {
 
   return (
     <div className="bubble-wrap">
-      <p>bubbles</p>
-      {/* <Svg width={400} height={400}>
+      
+      <div className="flex-box">
+        <div>
+        <p>bubbles</p>
+        <Svg width={400} height={700}>
         <Pack
           data={{
             children: bubbleData
@@ -54,14 +57,17 @@ const Bubbles = ({ colors }) => {
           }
           
         </Pack>
-      </Svg> */}
-      <Svg width={700} height={700}>
+      </Svg>
+        </div>
+        <div>
+        <p>partition</p>
+        <Svg width={400} height={700}>
         <Partition
           data={{
             children: bubbleData
           }}
           sum={datum => datum.value}
-          size={[600, 400]}
+          size={[400, 400]}
           nodeEnter={d => ({ ...d, r: 0 })}
           animate
         >
@@ -87,6 +93,10 @@ const Bubbles = ({ colors }) => {
           
         </Partition>
       </Svg>
+        </div>
+      </div>
+      
+      
       
     </div>
   );

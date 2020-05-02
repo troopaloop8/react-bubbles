@@ -96,3 +96,12 @@ form {
     margin-top: 16px;
   }
 }
+
+.flex-box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  div {
+    margin: 20px;
+  }
+}
